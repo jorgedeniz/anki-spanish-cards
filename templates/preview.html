@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Vista previa — Deck Español</title>
+<style>
+  body {
+    margin: 0;
+    padding: 40px 20px;
+    background-color: #EDE8DE;
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  .card-shell {
+    background-color: #FBF9F5;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    overflow: hidden;
+    width: 340px;
+  }
+  .card-shell.dark {
+    background-color: #1B1D22;
+  }
+  .label {
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #8A8474;
+    padding: 10px 0 0 0;
+  }
+  .dark .label { color: #6E7079; }
+
+  /* --- estilos del deck (copiados de styles.css) --- */
+  .card { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #FBF9F5; color: #26241F; text-align: center; padding: 32px 20px; }
+  .dark .card { background-color: #1B1D22; color: #EDEAE3; }
+  .card-front, .card-back { max-width: 480px; margin: 0 auto; }
+  .palabra-linea { display: flex; align-items: baseline; justify-content: center; gap: 8px; margin-bottom: 14px; }
+  .palabra { font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif; font-size: 38px; font-weight: 600; color: #1E3A5F; letter-spacing: 0.3px; }
+  .dark .palabra { color: #7FA8D6; }
+  .genero { font-size: 22px; color: #C68A2E; }
+  .dark .genero { color: #D9A94E; }
+  .audio { margin-bottom: 20px; }
+  .audio-btn { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: #1E3A5F; color: white; font-size: 14px; }
+  .dark .audio-btn { background: #7FA8D6; color: #1B1D22; }
+  #typeans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 18px; padding: 9px 14px; border: 2px solid #D8D2C4; border-radius: 10px; background-color: #FFFFFF; color: #26241F; width: 70%; max-width: 260px; text-align: center; outline: none; }
+  .dark #typeans { background-color: #26282E; border-color: #3A3D45; color: #EDEAE3; }
+  hr#answer { border: none; border-top: 1px solid #E4DFD5; margin: 20px auto; width: 60%; }
+  .dark hr#answer { border-top-color: #3A3D45; }
+  .typeGood { background-color: #E4F0E9; color: #2E6449; padding: 2px 6px; border-radius: 4px; }
+  .imagen-box { width: 220px; height: 150px; margin: 10px auto 16px auto; border-radius: 14px; background: linear-gradient(135deg, #D9C79A, #C68A2E); box-shadow: 0 2px 10px rgba(0,0,0,0.08); display:flex; align-items:center; justify-content:center; color:white; font-size:13px; }
+  .alt { font-size: 13px; color: #6B6558; margin-bottom: 10px; }
+  .dark .alt { color: #A8A398; }
+  .alt-label { font-weight: 600; color: #C68A2E; text-transform: uppercase; font-size: 10px; letter-spacing: 0.6px; margin-right: 6px; }
+  .ejemplo { font-family: Georgia, "Iowan Old Style", serif; font-style: italic; font-size: 15px; color: #3D3A32; margin-top: 8px; line-height: 1.5; }
+  .dark .ejemplo { color: #D8D4C9; }
+</style>
+</head>
+<body>
+
+  <div class="card-shell">
+    <div class="label">Anverso — modo claro</div>
+    <div class="card">
+      <div class="card-front">
+        <div class="palabra-linea">
+          <span class="genero">♀</span>
+          <span class="palabra">la madre</span>
+        </div>
+        <div class="audio"><span class="audio-btn">▶</span></div>
+        <div class="respuesta"><input id="typeans" type="text" placeholder="escribe en inglés..." disabled></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-shell">
+    <div class="label">Reverso — modo claro</div>
+    <div class="card">
+      <div class="card-front">
+        <div class="palabra-linea">
+          <span class="genero">♀</span>
+          <span class="palabra">la madre</span>
+        </div>
+        <div class="audio"><span class="audio-btn">▶</span></div>
+        <div class="respuesta"><span class="typeGood">mother</span></div>
+      </div>
+      <hr id="answer">
+      <div class="card-back">
+        <div class="imagen-box">[ imagen: madre ]</div>
+        <div class="alt"><span class="alt-label">También válido</span>mom</div>
+        <div class="ejemplo">"Mi madre cocina muy bien los domingos."</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-shell dark">
+    <div class="label">Reverso — modo oscuro</div>
+    <div class="card">
+      <div class="card-front">
+        <div class="palabra-linea">
+          <span class="genero">♀</span>
+          <span class="palabra">la madre</span>
+        </div>
+        <div class="audio"><span class="audio-btn">▶</span></div>
+        <div class="respuesta"><span class="typeGood">mother</span></div>
+      </div>
+      <hr id="answer">
+      <div class="card-back">
+        <div class="imagen-box">[ imagen: madre ]</div>
+        <div class="alt"><span class="alt-label">También válido</span>mom</div>
+        <div class="ejemplo">"Mi madre cocina muy bien los domingos."</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

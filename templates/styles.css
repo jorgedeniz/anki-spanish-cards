@@ -1,0 +1,158 @@
+.card {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #FBF9F5;
+  color: #26241F;
+  text-align: center;
+  padding: 32px 20px;
+}
+
+.card-front, .card-back {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.palabra-linea {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.palabra {
+  font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+  font-size: 42px;
+  font-weight: 600;
+  color: #1E3A5F;
+  letter-spacing: 0.3px;
+}
+
+.genero {
+  font-size: 26px;
+  color: #C68A2E;
+}
+
+.audio {
+  margin-bottom: 22px;
+}
+
+.respuesta {
+  margin-top: 8px;
+}
+
+#typeans {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 20px;
+  padding: 10px 16px;
+  border: 2px solid #D8D2C4;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  color: #26241F;
+  width: 80%;
+  max-width: 320px;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+#typeans:focus {
+  border-color: #1E3A5F;
+}
+
+hr#answer {
+  border: none;
+  border-top: 1px solid #E4DFD5;
+  margin: 24px auto;
+  width: 60%;
+}
+
+.typeGood {
+  background-color: #E4F0E9;
+  color: #2E6449;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.typeBad {
+  background-color: #F7E6E1;
+  color: #A8412B;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-decoration: line-through;
+}
+
+.typeMissed {
+  background-color: #FCEFD9;
+  color: #8A5A16;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.imagen img {
+  max-width: 260px;
+  max-height: 220px;
+  border-radius: 14px;
+  margin: 12px 0 18px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.alt {
+  font-size: 14px;
+  color: #6B6558;
+  margin-bottom: 12px;
+}
+
+.alt-label {
+  font-weight: 600;
+  color: #C68A2E;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.6px;
+  margin-right: 6px;
+}
+
+.ejemplo {
+  font-family: Georgia, "Iowan Old Style", serif;
+  font-style: italic;
+  font-size: 17px;
+  color: #3D3A32;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+/* Modo oscuro (night mode nativo de Anki) */
+.night_mode .card,
+.card.night_mode {
+  background-color: #1B1D22;
+  color: #EDEAE3;
+}
+
+.night_mode .palabra {
+  color: #7FA8D6;
+}
+
+.night_mode .genero {
+  color: #D9A94E;
+}
+
+.night_mode #typeans {
+  background-color: #26282E;
+  border-color: #3A3D45;
+  color: #EDEAE3;
+}
+
+.night_mode #typeans:focus {
+  border-color: #7FA8D6;
+}
+
+.night_mode hr#answer {
+  border-top-color: #3A3D45;
+}
+
+.night_mode .alt {
+  color: #A8A398;
+}
+
+.night_mode .ejemplo {
+  color: #D8D4C9;
+}
