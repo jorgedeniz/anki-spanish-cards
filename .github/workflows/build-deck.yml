@@ -1,0 +1,37 @@
+name: Regenerate Anki deck
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: # Allows manual trigger in the "Actions" window in GitHub
+
+permissions:
+  contents: write # Needed to publish the Release
+
+jobs:
+  build-deck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository checkout
+        uses: actions/checkout@v4
+
+      - name: Python setting
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Create the .apkg
+        env:
+          AZURE_STORAGE_CONNECTION_STRING: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
+        run: python scripts/build_apkg.py
+
+      - name: Publish as Release "latest" (overwrite the previous one, same url)
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: "Deck de vocabulario - última versión"
+          files: output/vocabulario_es_en.apkg
